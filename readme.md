@@ -1,3 +1,5 @@
+Documentor is the document management system that allow users to create departments, document types and upload documents to it. It is embeded with a search engine for fast and efficient search through documents. Also I implemented OCR for make possible search through document's file. This is a BETA version and need more improvements, but I enjoyed working on it.
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
