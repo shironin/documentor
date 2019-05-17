@@ -46,4 +46,9 @@ class Department extends Model
     {
         return Document::all()->where('department_id',$this->id)->count();
     }
+
+    public function getNumberOfDoctypes()
+    {
+        return Doctype::all()->where('department_id',$this->id)->count();
+    }
 }

@@ -74,4 +74,11 @@ class Doctype extends Model
     {
         return Document::all()->where('status',100)->where('doctype_id',$this->id)->count();
     }
+
+    public function getPercentOfDocsWithFileAttached()
+    {
+        $docs_all = Document::all()->where('status',100)->where('doctype_id',$this->id)->count();
+        $docs_file = Document::all()->where('status',100)->where('doctype_id',$this->id)->where('is_file',1)->count();
+        return $docs_file*100/$docs_all;
+    }
 }

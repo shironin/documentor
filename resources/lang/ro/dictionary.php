@@ -146,6 +146,10 @@ return [
     'documents_per_user_chart_title' => 'Număr de documente adăugate per utilizator',
     'documents_per_departments_chart_title' => 'Număr de documente per departament',
     'department_name_chart_label' => 'Numele departamentului',
-    ''
-
+    'number_of_doctype_chart_label' => 'Număr de tipuri documente',
+    'doctypes_per_departments_chart_title' => 'Număr de tipuri de documente per departament',
+    'percent_documents_files_per_type_chart_title' => 'Procentajul documentelor cu fișier atașat per tip de document',
+    'doctype_chart_label' => 'Tipul de document',
+    'percent_of_docs_chart_label' => '% documentelor cu fișier atașat',
+    'click_to_print_button' => 'Printează raport'
 ];

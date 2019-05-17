@@ -146,6 +146,10 @@ return [
     'documents_per_user_chart_title' => 'Number of documents per users',
     'documents_per_departments_chart_title' => 'Number of documents per departments',
     'department_name_chart_label' => 'Department name',
-    ''
-
+    'number_of_doctype_chart_label' => 'Number of doctypes',
+    'doctypes_per_departments_chart_title' => 'Numebr of document types per departments',
+    'percent_documents_files_per_type_chart_title' => 'Percent of documents with file attached per doctypes',
+    'doctype_chart_label' => 'Document type',
+    'percent_of_docs_chart_label' => '% of documents with file attached',
+    'click_to_print_button' => 'Click to print'
 ];
