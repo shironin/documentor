@@ -95,4 +95,9 @@ class User extends Authenticatable
     {
         return DB::table('messages')->where('receiver_id','=',$this->id)->where('status','=',0)->count();
     }
+
+    public function getNumberOfDocuments()
+    {
+        return Document::all()->where('user_id',$this->id)->count();
+    }
 }

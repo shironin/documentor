@@ -140,6 +140,9 @@ return [
     'frequently_asked_questions_text' => 'Întrebări frecvente',
     'bug_theme_label' => 'Ce tip de problemă ați întâlnit?',
     'describe_bug_label' => 'Descrieți amănunțit problema',
-    'send_report_button' => 'Trimite raport!'
+    'send_report_button' => 'Trimite raport!',
+    'user_chart_label' => 'Utilizator',
+    'number_of_docs_chart_label' => 'Număr de documente',
+    'documents_per_user_chart_title' => 'Număr de documente adăugate per utilizator'
 
 ];

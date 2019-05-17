@@ -6,6 +6,7 @@ use App\Department;
 use App\Doctype;
 use App\Document;
 use App\Http\Requests;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -47,7 +48,8 @@ class HomeController extends Controller
         $departments_number = Department::all()->count();
         $doctypes_number = Doctype::all()->count();
         $docs_number = Document::all()->where('status',100)->count();
-        return view('statistics.index', compact('departments_number','doctypes_number','docs_number','doctypes'));
+        $users = User::all();
+        return view('statistics.index', compact('departments_number','doctypes_number','docs_number','doctypes','users'));
     }
 
     public function faq()

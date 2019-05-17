@@ -41,8 +41,11 @@
 
     </div>
 
-    <div id="chart_div"></div>
-
+    <br>
+    <div id="chart_doctypes"></div>
+    <br>
+    <div id="chart_users"></div>
+    <br><br><br>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
@@ -70,14 +73,47 @@
 
             // Set chart options
             var options = {'title':'@lang("dictionary.documents_per_doctypes_chart_title")',
-                'width':$(window).width()-200+'pt',
+                'width':$(window).width()-100+'pt',
                 'height':300};
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.PieChart(document.getElementById('chart_doctypes'));
             chart.draw(data, options);
         }
         @endif
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '@lang("dictionary.user_chart_label")');
+            data.addColumn('number', '@lang("dictionary.number_of_docs_chart_label")');
+
+            data.addRows([
+                    @foreach($users as $user)
+                        ['{{ $user->name }}', {{ $user->getNumberOfDocuments() }}],
+                    @endforeach
+            ]);
+
+            var options = {
+                title: '@lang("dictionary.documents_per_user_chart_title")',
+                hAxis: {
+                    title: '@lang("dictionary.user_chart_label")',
+                },
+                vAxis: {
+                    title: '@lang("dictionary.number_of_docs_chart_label")'
+                },
+                width:$(window).width()-400+'pt',
+                height:300
+            };
+
+            var chart = new google.visualization.ColumnChart(
+                document.getElementById('chart_users'));
+
+            chart.draw(data, options);
+        }
 
     </script>
 

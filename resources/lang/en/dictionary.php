@@ -140,6 +140,9 @@ return [
     'frequently_asked_questions_text' => 'Frequently Asked Questions',
     'bug_theme_label' => 'What is the bug about?',
     'describe_bug_label' => 'Please, describe bellow how it appears',
-    'send_report_button' => 'Send report!'
+    'send_report_button' => 'Send report!',
+    'user_chart_label' => 'User',
+    'number_of_docs_chart_label' => 'Number of documents',
+    'documents_per_user_chart_title' => 'Number of documents per users'
 
 ];
