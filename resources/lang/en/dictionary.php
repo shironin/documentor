@@ -143,6 +143,9 @@ return [
     'send_report_button' => 'Send report!',
     'user_chart_label' => 'User',
     'number_of_docs_chart_label' => 'Number of documents',
-    'documents_per_user_chart_title' => 'Number of documents per users'
+    'documents_per_user_chart_title' => 'Number of documents per users',
+    'documents_per_departments_chart_title' => 'Number of documents per departments',
+    'department_name_chart_label' => 'Department name',
+    ''
 
 ];

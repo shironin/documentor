@@ -11,7 +11,7 @@
             <a href="{{ url('/departments') }}" style="text-decoration: none;color: #1b1e21;">
                 <div class="card" style="border: 1px solid #2a2a2a;">
                     <div class="card-body" style="text-align: center; padding: 0;">
-                        <h1>{{ $departments_number }}</h1>
+                        <h1>{{ $departments->count() }}</h1>
                     </div>
                     <div class="card-footer" style="text-align: center"><b>@lang('dictionary.total_departments_text')</b></div>
                 </div>
@@ -22,7 +22,7 @@
             <a href="{{ url('/doctypes') }}" style="text-decoration: none;color: #1b1e21;">
                 <div class="card" style="border: 1px solid #2a2a2a;">
                     <div class="card-body" style="text-align: center; padding: 0;">
-                        <h1>{{ $doctypes_number }}</h1>
+                        <h1>{{ $doctypes->count() }}</h1>
                     </div>
                     <div class="card-footer" style="text-align: center"><b>@lang('dictionary.total_doctypes_text')</b></div>
                 </div>
@@ -41,8 +41,9 @@
 
     </div>
 
-    <br>
     <div id="chart_doctypes"></div>
+    <br>
+    <div id="chart_departments"></div>
     <br>
     <div id="chart_users"></div>
     <br><br><br>
@@ -67,7 +68,7 @@
             data.addColumn('number', 'Slices');
             data.addRows([
                 @foreach($doctypes as $doctype)
-                    ['{{ $doctype->name }}', {{ $doctype->getDocumentsNumber() }}],
+                    ['{{ $doctype->name }}', {{ $doctype->getNumberOfDocuments() }}],
                 @endforeach
             ]);
 
@@ -112,6 +113,27 @@
             var chart = new google.visualization.ColumnChart(
                 document.getElementById('chart_users'));
 
+            chart.draw(data, options);
+        }
+
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart2);
+        function drawChart2() {
+            var data = google.visualization.arrayToDataTable([
+                ['@lang("dictionary.department_name_chart_label")', '@lang("dictionary.number_of_docs_chart_label")'],
+                @foreach($departments as $department)
+                    ['{{ $department->name }}', {{ $department->getNumberOfDocuments() }}],
+                @endforeach
+            ]);
+
+            var options = {
+                title: '@lang("dictionary.documents_per_departments_chart_title")',
+                pieHole: 0.3,
+                width:$(window).width()-100+'pt',
+                height:300
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_departments'));
             chart.draw(data, options);
         }
 

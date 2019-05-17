@@ -143,6 +143,9 @@ return [
     'send_report_button' => 'Trimite raport!',
     'user_chart_label' => 'Utilizator',
     'number_of_docs_chart_label' => 'Număr de documente',
-    'documents_per_user_chart_title' => 'Număr de documente adăugate per utilizator'
+    'documents_per_user_chart_title' => 'Număr de documente adăugate per utilizator',
+    'documents_per_departments_chart_title' => 'Număr de documente per departament',
+    'department_name_chart_label' => 'Numele departamentului',
+    ''
 
 ];

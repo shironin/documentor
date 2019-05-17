@@ -45,11 +45,11 @@ class HomeController extends Controller
     public function statistics()
     {
         $doctypes = Doctype::all();
-        $departments_number = Department::all()->count();
-        $doctypes_number = Doctype::all()->count();
+        $departments = Department::all();
+        $doctypes = Doctype::all();
         $docs_number = Document::all()->where('status',100)->count();
         $users = User::all();
-        return view('statistics.index', compact('departments_number','doctypes_number','docs_number','doctypes','users'));
+        return view('statistics.index', compact('departments','doctypes','docs_number','doctypes','users'));
     }
 
     public function faq()

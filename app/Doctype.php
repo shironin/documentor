@@ -70,7 +70,7 @@ class Doctype extends Model
         }
     }
 
-    public function getDocumentsNumber()
+    public function getNumberOfDocuments()
     {
         return Document::all()->where('status',100)->where('doctype_id',$this->id)->count();
     }
