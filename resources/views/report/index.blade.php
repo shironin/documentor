@@ -16,6 +16,10 @@
                 <textarea class="form-control" rows="3" name="description" cols="50" id="description"></textarea>
             </div>
             <div class="form-group col-12">
+                <label for="file">@lang('dictionary.attache_file_label')</label>
+                <input id="file" type="file">
+            </div>
+            <div class="form-group col-12">
                 <input type="submit" class="btn btn-outline-success" value="@lang('dictionary.send_report_button')">
             </div>
         </form>

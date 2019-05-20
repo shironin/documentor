@@ -151,5 +151,6 @@ return [
     'percent_documents_files_per_type_chart_title' => 'Procentajul documentelor cu fișier atașat per tip de document',
     'doctype_chart_label' => 'Tipul de document',
     'percent_of_docs_chart_label' => '% documentelor cu fișier atașat',
-    'click_to_print_button' => 'Printează raport'
+    'click_to_print_button' => 'Printează raport',
+    'attache_file_label' => 'Atașează un fișier ce poate descrie problema'
 ];

@@ -151,5 +151,6 @@ return [
     'percent_documents_files_per_type_chart_title' => 'Percent of documents with file attached per doctypes',
     'doctype_chart_label' => 'Document type',
     'percent_of_docs_chart_label' => '% of documents with file attached',
-    'click_to_print_button' => 'Click to print'
+    'click_to_print_button' => 'Click to print',
+    'attache_file_label' => 'Attache file that may describe the problem'
 ];
