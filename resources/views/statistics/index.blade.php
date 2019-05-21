@@ -76,12 +76,13 @@
         google.charts.load('current', {'packages':['corechart']});
 
         // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(docs_per_type);
+
 
         // Callback that creates and populates a data table,
         // instantiates the pie chart, passes in the data and
         // draws it.
         @if($doctypes->count() > 0)
+        google.charts.setOnLoadCallback(docs_per_type);
         function docs_per_type() {
 
             // Create the data table.

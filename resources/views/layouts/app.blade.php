@@ -113,7 +113,7 @@
                 <a href="{{ url('/messages') }}" style="display:block">
                     <i class="far fa-comments fa-lg"></i>
                     @lang('dictionary.messages_text')
-                    @if (Auth::user()->checkMessages() > 0)
+                    @if (Auth::check() && Auth::user()->checkMessages() > 0)
                         <span class="badge badge-light">{{ Auth::user()->checkMessages() }}</span>
                     @endif
                 </a>
