@@ -98,6 +98,6 @@ class User extends Authenticatable
 
     public function getNumberOfDocuments()
     {
-        return Document::all()->where('user_id',$this->id)->count();
+        return Document::all()->where('user_id',$this->id)->where('status',100)->count();
     }
 }
